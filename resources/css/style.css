@@ -21,6 +21,16 @@ html{
     text-rendering: optimizeLegibility; 
 }
 
+.clearfix{
+    zoom: 1;
+}
+.clearfix:after{
+    content: '.'; 
+    clear: both; 
+    display: block; 
+    height: 0; 
+    visibility: hidden; 
+}
 /*----------------------------------------------------------------*/
 /*  REUSABLE COMPONENTS  */
 /*----------------------------------------------------------------*/
@@ -202,6 +212,7 @@ header{
 .section-features .long-copy{
     margin-bottom: 30px; 
 }
+
 /*----------------------------------------------------------------*/
 /*  MEAL SECTION  */
 /*----------------------------------------------------------------*/
@@ -238,4 +249,54 @@ header{
 .meal-photo img:hover{
     opacity: 1; 
     transform: scale(1.03)
+}
+
+/*----------------------------------------------------------------*/
+/*  WORK IT WORKS SECTION  */
+/*----------------------------------------------------------------*/
+
+.steps-steps{
+    background-color: rgb(221, 220, 220)
+}
+.steps-box:first-child{
+    text-align: right; 
+    padding-right: 3%;
+    margin-top: 30px;  
+}
+
+.steps-box:last-child{
+    padding-left: 3%; 
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%; 
+}
+
+.work-step{
+    margin-bottom: 50px; 
+}
+
+.work-step:last-of-type{
+    margin-bottom: 80px; 
+}
+
+.work-step div {
+    color: #e67e22;
+    border: 1px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%; /*creating circle*/
+    height: 55px; 
+    width: 55px; 
+    text-align: center; 
+    padding: 5px; 
+    float: left; 
+    font-size: 150%; 
+    margin-left: 25px; 
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px; 
 }
