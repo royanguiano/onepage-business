@@ -164,6 +164,19 @@ header{
     margin-bottom: 10px; 
 }
 
+.icon-small{
+    display: inline-block;
+    width: 30px; 
+    text-align: center; 
+    color:  #e67e22;
+    font-size: 120%; 
+    margin-right: 10px; 
+    /* secrets to align icons and text */
+    line-height: 120%; 
+    vertical-align: middle;
+    margin-top: -5px; 
+}
+
 
 /*----------------------------------------------------------------*/
 /*  BUTTONS COMPONENTS  */
@@ -205,6 +218,11 @@ header{
     border: 1px solid #e67e22; 
     color: white;
 }
+
+.btn-app:link, .btn-app:visited{
+    border: 0; 
+}
+
 /*----------------------------------------------------------------*/
 /*  FEATURES SECTION  */
 /*----------------------------------------------------------------*/
@@ -255,8 +273,8 @@ header{
 /*  WORK IT WORKS SECTION  */
 /*----------------------------------------------------------------*/
 
-.steps-steps{
-    background-color: rgb(221, 220, 220)
+.section-steps{
+    background-color: rgb(241, 235, 235)
 }
 .steps-box:first-child{
     text-align: right; 
@@ -299,4 +317,32 @@ header{
     height: 50px;
     width: auto;
     margin-right: 10px; 
+}
+
+
+/*----------------------------------------------------------------*/
+/*  CITIES SECTION  */
+/*----------------------------------------------------------------*/
+
+.box img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 150px;  
+}
+
+/*----------------------------------------------------------------*/
+/*  GENERIC LINKS  */
+/*----------------------------------------------------------------*/
+
+a:link, a:active{
+    color: #e67e22;
+    text-decoration: none; 
+    border-bottom: 1px solide #e67e22;
+    padding-bottom: 1px;
+    transition: border-botton 0.2s, color 0.2s;
+}
+
+a:hover, a:active{
+    color: #555;
+    border-bottom: 1px solide transparent; 
 }
