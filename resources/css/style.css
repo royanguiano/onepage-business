@@ -9,7 +9,8 @@ orange color: #e67e22;
 * {
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+            box-sizing: border-box;
 }
 
 html{
@@ -19,6 +20,7 @@ html{
     font-weight: 300;
     font-size: 20px; 
     text-rendering: optimizeLegibility; 
+    overflow-x: hidden;
 }
 
 .clearfix{
@@ -90,6 +92,7 @@ h2:after{
 
 header{
     /*adding gradient to hero background image for better font style*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.603)), to(rgba(0, 0, 0, 0.603))), url('img/hero.jpg');
     background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)), url('img/hero.jpg'); 
     background-size: cover;
     background-position: center;
@@ -103,7 +106,8 @@ header{
     width: 1140px; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
 }
 
 .logo{
@@ -131,6 +135,7 @@ header{
     text-transform: uppercase; /* make uppercase */
     font-size: 90%; 
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-botton 0.2s;
     transition: border-botton 0.2s;
     
 }
@@ -194,6 +199,7 @@ header{
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
     transition: background-color 0.4s, border 0.4s, color 0.4s; /*CSS3 syntax */
 }
 
@@ -261,13 +267,18 @@ header{
     opacity: 0.7; 
     width: 100%; 
     height: auto; 
-    transform: scale(1.20); 
+    -webkit-transform: scale(1.20); 
+            transform: scale(1.20); 
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s; 
+    transition: opacity 0.5s, -webkit-transform 0.5s; 
     transition: transform 0.5s, opacity 0.5s; 
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; 
 }
 
 .meal-photo img:hover{
     opacity: 1; 
-    transform: scale(1.03)
+    -webkit-transform: scale(1.03); 
+            transform: scale(1.03)
 }
 
 /*----------------------------------------------------------------*/
@@ -340,6 +351,7 @@ a:link, a:active{
     text-decoration: none; 
     border-bottom: 1px solide #e67e22;
     padding-bottom: 1px;
+    -webkit-transition: border-botton 0.2s, color 0.2s;
     transition: border-botton 0.2s, color 0.2s;
 }
 
@@ -353,10 +365,17 @@ a:hover, a:active{
 /*----------------------------------------------------------------*/
 
 .section-testimonials{
-    background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)), url('img/back-customers.jpg'); 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.603)), to(rgba(0, 0, 0, 0.603))), url('img/back-customers.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)), url('img/back-customers.jpg'); 
     background-size: cover;
     color: white; 
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 blockquote{
@@ -402,7 +421,8 @@ cite img {
     width: 90%; 
     margin-left: 5%; 
     /* box-shadow: x-offset y-offiset blur color;  */
-    box-shadow: 0 2px 2px rgb(240, 237, 237);
+    -webkit-box-shadow: 0 2px 2px rgb(240, 237, 237);
+            box-shadow: 0 2px 2px rgb(240, 237, 237);
 
 }
 
@@ -509,6 +529,7 @@ footer{
     text-decoration: none;
     border: 0; 
     color: #888; 
+    -webkit-transition: color 0.2s; 
     transition: color 0.2s;
 }
 
@@ -520,4 +541,127 @@ footer{
     color: #888;
     text-align: center;
     font-size: 90%; 
+}
+
+/* screens from 1023px - 1200px */
+@media only screen and (max-width:1200px){
+    .hero-text-box{
+        width: 100%; 
+        padding: 0 2%; 
+    }
+
+    .row{ padding: 0 2%; width: 100%; }
+}
+
+/* screens from 768px - 1023px */
+@media only screen and (max-width: 1023px){
+    body{
+        font-size: 18px;
+    }
+    section{ padding: 60px 0; }
+
+    .long-copy{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .steps-box{
+        margin-top: 10px;
+    }
+    .work-step{
+        margin-bottom: 40px; 
+    }
+    .work-step:last-child{
+        margin-top: 10px;
+    }
+    .work-step{
+        margin-top: 40px;
+    }
+    .work-step:last-of-type{
+        margin-bottom: 60px;
+    }
+    .app-screen{
+        width: 50%;
+    }
+
+    .icon-small{
+        width: 20px;
+        margin-right: 5px;
+    }
+    .city-feature{
+        font-size: 90%;
+    }
+    .plan-box{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .plan-price{
+        font-size: 200%;
+    }
+}
+
+/* screens from 468px - 768px */
+@media only screen and (max-width: 768px){
+    body{
+        font-size: 16px;
+    }
+    section{
+        padding: 30px 0; 
+    }
+    .row, .hero-text-box{
+        padding: 0 4%;
+    }
+    .col{
+        width: 100%;
+    }
+    .main-nav{
+        display: none;
+    }
+    h1{
+        font-size: 180%;
+    }
+    h2{
+        font-size: 150%;
+    }
+    .long-copy{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .work-step{
+        margin-bottom: 20px;
+    }
+    .work-step:last-child{
+        margin-bottom: 20px;
+    }
+    .work-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px; 
+    }
+    .steps-box:first-child{
+        text-align: center;
+    }
+
+    .app-screen{ width: 40%;}
+    .box img{
+        margin-bottom: 20px;
+    }
+    .plan-box ul li .icon-small{
+        margin-right: 25px;
+        vertical-align: bottom;
+    }
+    .social-links{
+        text-align: center;
+        padding: 10px 0;
+        float: none;
+    }
+    .col{
+        margin: 3% 4% 0 0;
+    }
+}
+
+/* screens from 0 - 480px */
+@media only screen and (max-width: 480px){
+    
 }

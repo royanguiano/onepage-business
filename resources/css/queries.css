@@ -1,0 +1,30 @@
+/* PORTRAIT TABLET - 1200PX  */
+@media only screen and(max-width:1200px){
+    .hero-text-box { 
+        width: 100%; 
+        padding: 0 2%; 
+    }
+
+    .row{ padding: 0 2%; }
+    
+}
+
+/* SMALL TABLE - IPAD PORTRAIT MODE FROM 768PX - 1023PX*/
+@media only screen and(max-width:1023px){
+    body{
+        font-size: 18px;
+    }
+    section {
+        padding: 60px 0; 
+    }
+}
+
+/* SMALL PHONES - SMALL TABLETS FROM 481px - 767px */
+@media only screen and(max-width:767px){
+    
+}
+
+/*SMALL PHONES FROM 0px - 480px*/
+@media only screen and(max-width:480px){
+    
+}
