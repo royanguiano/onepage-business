@@ -80,5 +80,18 @@ $(document).ready(function(){
          offset:'80%;'
      })
 
+     $('.js-mobile-icon').click(function(){
+         let nav = $('.js-main-nav')
+         let icon =   $('.js-mobile-icon')[0].childNodes[0].attributes[0].value
+         
+         if(icon == 'menu'){
+            $('.js-mobile-icon')[0].childNodes[0].attributes[0].value = 'close'
+         } else {
+            $('.js-mobile-icon')[0].childNodes[0].attributes[0].value = 'menu'
+         }
+
+         nav.slideToggle(200)
+     })
+
 
 })
