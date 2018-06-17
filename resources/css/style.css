@@ -117,6 +117,14 @@ header{
     margin-top: 20px; 
 }
 
+.logo-black{
+    display: none;
+    height: 60px;
+    width: auto;
+    float: left;
+    margin:20px 0; 
+}
+/* main navigation */
 .main-nav{
     float: right;
     list-style: none; /*get rid of bullet points*/
@@ -143,6 +151,43 @@ header{
 .main-nav li a:hover, .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
 }
+
+/* sticky navigation */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.959);
+    width: 100%;
+    box-shadow: 0 2px 2px #888;
+    z-index: 5;
+}
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    padding: 5px 0; 
+    color: #555;
+}
+.sticky .logo{
+    display: none;
+}
+
+.sticky .logo-black{
+    display: block;
+    margin: 1px 0;
+}
+
+.sticky .main-nav{
+    margin: 1px 0;
+}
+
+.sticky .main-nav li {
+    display: inline-block;
+    margin: 20px; 
+}
+
+
+
+
 
 /*----------------------------------------------------------------*/
 /*  PARAGRAPH COMPONENTS  */
@@ -543,6 +588,11 @@ footer{
     font-size: 90%; 
 }
 
+/*----------------------------------------------------------------*/
+/*  MOBILE */
+/*----------------------------------------------------------------*/
+
+
 /* screens from 1023px - 1200px */
 @media only screen and (max-width:1200px){
     .hero-text-box{
@@ -664,4 +714,20 @@ footer{
 /* screens from 0 - 480px */
 @media only screen and (max-width: 480px){
     
+}
+
+/*----------------------------------------------------------------*/
+/*  ANIMATION */
+/*----------------------------------------------------------------*/
+
+.js-wp-1, .js-wp-2{
+    opacity: 0;
+}
+
+.js-wp-1 animated fadeIn, 
+.js-wp-2 animated rollIn,
+.js-wp-3 animated bounceInLeft,
+.js-wp-4 animated bounceInRight
+{
+    opacity: 1;
 }
