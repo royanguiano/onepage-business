@@ -23,3 +23,13 @@
 
 //animation effects
 7. https://github.com/daneden/animate.css
+
+//optimize website
+//compress images
+http://imagecompressor.com/
+
+w3 standard validator
+https://validator.w3.org/#validate_by_input
+
+google maps
+https://github.com/hpneo/gmaps

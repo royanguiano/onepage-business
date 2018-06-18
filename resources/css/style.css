@@ -530,7 +530,7 @@ cite img {
 input[type=text], 
 input[type=email],
 select, textarea{
-    width: 100%; 
+    width: 50%; 
     padding: 7px; 
     border-radius: 3px; 
     border: 1px solid #ccc;
@@ -546,6 +546,41 @@ input[type=checkbox]{
 
 *:focus{
     outline: none; 
+}
+
+/*----------------------------------------------------------------*/
+/*  MAP */
+/*----------------------------------------------------------------*/
+
+.map-box{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.map{
+    width: 100%;
+    height: 600px;
+    z-index: 0;
+    position: relative;
+}
+
+.form-box{
+    color: white;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(95, 93, 93, 0.781);
+    z-index: 4;
+    width: 50%;
+}
+
+.form-box .span-1-of-3{
+    width: 250px;
+}
+
+.form-box h2 {
+    margin-right: 40%;
 }
 
 /*----------------------------------------------------------------*/
@@ -659,6 +694,7 @@ footer{
     .main-nav{
         display: inline-block;
     }
+    
 }
 
 /* screens from 468px - 768px */

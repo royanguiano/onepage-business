@@ -83,7 +83,7 @@ $(document).ready(function(){
      $('.js-mobile-icon').click(function(){
          let nav = $('.js-main-nav')
          let icon =   $('.js-mobile-icon')[0].childNodes[0].attributes[0].value
-         
+
          if(icon == 'menu'){
             $('.js-mobile-icon')[0].childNodes[0].attributes[0].value = 'close'
          } else {
@@ -92,6 +92,12 @@ $(document).ready(function(){
 
          nav.slideToggle(200)
      })
+
+     new GMaps({
+        div: '.map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
 
 
 })
